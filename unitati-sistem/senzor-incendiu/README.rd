@@ -1,0 +1,3 @@
+Senzor incendiu:
+- fum
+- temperatura

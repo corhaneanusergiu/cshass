@@ -13,22 +13,22 @@
 // Enables and select radio type (if attached)
 #define MY_RADIO_NRF24
 //#define MY_RF24_ENABLE_ENCRYPTION
-//#define MY_RF24_PA_LEVEL RF24_PA_MAX
-//#define MY_RF24_DATARATE RF24_250KBPS
+#define MY_RF24_PA_LEVEL RF24_PA_MAX
+#define MY_RF24_DATARATE RF24_250KBPS
 
 #define MY_GATEWAY_MQTT_CLIENT
 
 #define MY_OTA_FIRMWARE_FEATURE
 
 // Set this nodes subscripe and publish topic prefix, keep it as short as possible
-#define MY_MQTT_PUBLISH_TOPIC_PREFIX "P"
-#define MY_MQTT_SUBSCRIBE_TOPIC_PREFIX "S"
+#define MY_MQTT_PUBLISH_TOPIC_PREFIX "P"   // out - publish
+#define MY_MQTT_SUBSCRIBE_TOPIC_PREFIX "S" // in - subscribe
 
 // Set MQTT client id
 #define MY_MQTT_CLIENT_ID "GW1"
 
 #define MY_GATEWAY_W5100
-#define MY_MAC_ADDRESS 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0x01
+#define MY_MAC_ADDRESS 0x1A, 0x2A, 0x3A, 0x4A, 0x5A, 0x01  // 1a:2a:3a:4a:5a:01
 
 // W5100 Ethernet module SPI enable (optional if using a shield/module that manages SPI_EN signal)
 //#define MY_W5100_SPI_EN 4
@@ -72,6 +72,22 @@
 #include <SPI.h>
 #include <MySensors.h>
 
+// Set blinking period
+#define MY_DEFAULT_LED_BLINK_PERIOD 300
+
+// Enable inclusion mode
+//#define MY_INCLUSION_MODE_FEATURE
+// Enable Inclusion mode button on gateway
+//#define MY_INCLUSION_BUTTON_FEATURE
+// Set inclusion mode duration (in seconds)
+//#define MY_INCLUSION_MODE_DURATION 60
+// Digital pin used for inclusion mode button
+//#define MY_INCLUSION_MODE_BUTTON_PIN  3
+
+// Uncomment to override default HW configurations
+#define MY_DEFAULT_ERR_LED_PIN 7  // Error led pin
+#define MY_DEFAULT_RX_LED_PIN  8  // Receive led pin
+#define MY_DEFAULT_TX_LED_PIN  9  // the PCB, on board LED
 
 /*
 Ethernet use the following PINs, do not use them:
@@ -83,7 +99,7 @@ void setup()
 
 void presentation() {
   // Send the sketch version information to the gateway and Controller
-  sendSketchInfo(SI, SN);
+  sendSketchInfo(SI, SN, "Gateway 2.4GHz");
 }
 
 void loop()

@@ -35,7 +35,7 @@ void setup()
 
 void presentation()
 {
-    sendSketchInfo(SKETCH_NAME, __DATE__);
+    sendSketchInfo(SKETCH_NAME, __DATE__, "Batt-node");
     present(PRIMARY_CHILD_ID, S_DOOR, "Reed Contact");
 }
 

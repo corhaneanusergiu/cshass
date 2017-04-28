@@ -196,10 +196,15 @@ void setup() {
   #endif
 }
 
-void presentation() {
-  // Present locally attached sensors here
-  // Send the sketch version information to the gateway and Controller
+void presentation()  {
+  // Send the sketch version information
+  // to the gateway and controller
   sendSketchInfo("Denumire Sketch", "1.0");
+
+  // Register one or more sensors.
+  // For available sensor types, see
+  // https://home-assistant.io/components/sensor.mysensors/
+  present(SENSOR_CHILD_ID, S_CUSTOM);
 }
 
 void loop() {

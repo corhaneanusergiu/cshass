@@ -40,7 +40,7 @@
 //#define MY_RADIO_RFM69
 
 #define MY_RF24_PA_LEVEL RF24_PA_LOW //Options: RF24_PA_MIN, RF24_PA_LOW, RF24_PA_HIGH, RF24_PA_MAX
-#define MY_RF24_CHANNEL  76
+#define MY_RF24_CHANNEL  76  // default channel
 #define MY_NODE_ID 1  //Manually set the node ID here. Comment out to auto assign
 #define MY_TRANSPORT_WAIT_READY_MS 3000 //This will allow the device to function without draining the battery if it can't find the gateway when it first starts up
 #define MY_BAUD_RATE 9600 //Serial monitor will need to be set to 9600 Baud

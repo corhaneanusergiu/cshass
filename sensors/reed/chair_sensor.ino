@@ -29,11 +29,11 @@
    VIDEO
    To watch a video on how to make this sensor go here: https://youtu.be/uz3nBkRKSkk
 */
-#define SKETCH_NAME "Chair Sensor"
+#define SKETCH_NAME "Chair Sensor"  // reed sensor
 #define SKETCH_VERSION "1.0"
 
 // Enable debug prints to serial monitor
-//#define MY_DEBUG
+//#define MY_DEBUG  // don't enable when is in production
 
 // Enable and select radio type attached
 #define MY_RADIO_NRF24

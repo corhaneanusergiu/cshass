@@ -1,4 +1,4 @@
-*******************************
+/*******************************
  *
  * REVISION HISTORY
  * Version 1.0 - Henrik Ekblad
@@ -94,4 +94,4 @@ void loop()
 {
 	// Send locally attached sensors data here
 }
- 1 
+ 1

@@ -94,4 +94,3 @@ void loop()
 {
 	// Send locally attached sensors data here
 }
- 1

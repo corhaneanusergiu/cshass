@@ -18,7 +18,7 @@
 
 #define MY_GATEWAY_MQTT_CLIENT
 
-#define MY_OTA_FIRMWARE_FEATURE
+//#define MY_OTA_FIRMWARE_FEATURE
 
 // Set this nodes subscripe and publish topic prefix, keep it as short as possible
 #define MY_MQTT_PUBLISH_TOPIC_PREFIX "P"   // out - publish
@@ -49,8 +49,8 @@
 #define MY_RF24_CS_PIN 6  // Yellow
 
 // Enable these if your MQTT broker requires usenrame/password
-#define MY_MQTT_USER "PI"
-#define MY_MQTT_PASSWORD "368545CSG"
+#define MY_MQTT_USER "pi"
+#define MY_MQTT_PASSWORD "368545csg"
 
 // If you use static IP, uncomment the following lines
 // If you define the Gateway IP in the router and use DHCP, no modification is needed

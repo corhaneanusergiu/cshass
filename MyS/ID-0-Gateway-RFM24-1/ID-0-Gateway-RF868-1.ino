@@ -11,6 +11,9 @@
 #define MY_DEBUG
 
 // Enables and select radio type (if attached)
+#define MY_RADIO_RFM69  // Define for using RFM69 radio
+
+// Enables and select radio type (if attached)
 #include <RFM69.h>
 #include <SPI.h>
 #define NODEID        1    //unique for each node on same network
@@ -23,7 +26,7 @@
 #define ENCRYPTKEY    "xxxxxxxxxxxxxxxx" //exactly the same 16 characters/bytes on all nodes!
 #define IS_RFM69HW    //uncomment only for RFM69HW! Leave out if you have RFM69W!
 #define ACK_TIME      30 // max # of ms to wait for an ack
-#define LED           9  // Moteinos have LEDs on D9
+//#define LED           9  // Moteinos have LEDs on D9
 #define SERIAL_BAUD   9600  //must be 9600 for GPS, use whatever if no GPS
 
 #define MY_GATEWAY_MQTT_CLIENT
